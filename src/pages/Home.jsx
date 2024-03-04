@@ -88,7 +88,7 @@ const Home = () => {
   };
 
   return (
-    <section className='w-full h-screen relative '>
+    <section className='w-full h-screen relative overflow-hidden'>
       <div className='float-animation absolute top-20 z-10 flex items-center justify-center'>
         {currentStage ? (
         <div className="relative">
