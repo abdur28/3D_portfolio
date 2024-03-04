@@ -11,7 +11,6 @@ export function Avatar({ ...props }) {
   const { scene } = useGLTF(avatarScene);
   const { animations: petting } = useFBX(avatarAnimation)
   petting[0].name = 'Petting'
-  console.log(petting)
   // Get animation actions associated with the rocket
   const { actions } = useAnimations(petting, ref);
 
