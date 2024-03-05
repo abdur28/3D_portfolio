@@ -86,14 +86,17 @@
   transform: translate(-50%, -50%); 
 }
 
-.float-animation {
-  top: 8vw;
-  left: 8vw;
+.float-animation{
   animation: float 2s ease-in-out infinite;
 }
 
+.float {
+  top: 3vw;
+  left: 10vw;
+}
+
 .asteroid-padding{
-  /* margin-top: -2vw; */
+  width: 20vw;
 }
 
 .name{
@@ -149,9 +152,37 @@
 }
 
 @media (max-width: 768px) {
-  .float-animation {
+  .float {
+    top: 4vw;
     left: 1vw; 
-    padding-top: 15vh; 
+    padding-top: 10vh; 
+  }
+  .thought-bubble {
+    width: 45vw;
+  }
+
+  .info-box p {
+    font-size: 3vw;
+  }
+
+  .asteroid-padding{
+    width: 35vw;
+  }
+
+
+  .link-button {
+    padding: 4px 8px;
+    left: 2vw; 
+    font-size: 1.7vw;
+    margin-top: 1vh; 
+  }
+}
+
+@media (max-width: 450px) {
+  .float {
+    top: 8vw;
+    left: 1vw; 
+    padding-top: 10vh; 
   }
   .thought-bubble {
     width: 60vw;
@@ -162,11 +193,9 @@
   }
 
   .asteroid-padding{
-    /* margin-top: 5vw; */
+    width: 50vw;
   }
 
-  .info-box {
-  }
   .link-button {
     padding: 4px 8px;
     left: 4.5vw; 
@@ -772,4 +801,61 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 
+/* contact button */
+
+.contact-button {
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  z-index: 1;
+}
+
+.contact-button::after,
+.contact-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.contact-button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: rgb(79, 115, 139);
+  border-radius: 30px;
+}
+
+.contact-button::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.contact-button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.contact-button:hover::after {
+  border-radius: 30px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.contact-button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
 

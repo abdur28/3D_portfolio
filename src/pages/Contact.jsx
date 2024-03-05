@@ -136,7 +136,7 @@ const Contact = () => {
               <button
                 type='submit'
                 disabled={loading}
-                className='py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-secondary link-button'
+                className='font-bold contact-button'
                 style={{ width: '150px' }}
               >
 
