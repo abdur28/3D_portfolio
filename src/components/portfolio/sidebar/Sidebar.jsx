@@ -45,7 +45,7 @@ const Sidebar = () => {
     };
   }, []);
 
-  const clipPath = isMobile ? "circle(0px at 140px 50px)" : "circle(0px at 340px 50px)";
+  const clipPath = isMobile ? "circle(0px at 115px 50px)" : "circle(0px at 340px 50px)";
 
   variants.closed.clipPath = clipPath;
 

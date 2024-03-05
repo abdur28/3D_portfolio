@@ -94,27 +94,33 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative overflow-hidden'>
-      <div className='float-animation absolute z-10 flex items-center justify-center'>
+      
       {currentStage ? (
-        <div className="relative">
-          {isDarkTheme ? (
-            <React.Fragment>
-              <img src={asteroid} className='thought-bubble' alt="" />
-              <div className='text-white asteroid-padding info-box absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                {currentStage && <HomeInfo currentStage={currentStage} />}
-              </div>
-            </React.Fragment>
+          isDarkTheme ? (
+              <React.Fragment>
+                  <div className='float absolute z-10 flex items-center justify-center'>
+                      <div className="relative">
+                          <img src={asteroid} className='thought-bubble asteroid-padding' alt="" />
+                          <div className='text-black info-box absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                              {currentStage && <HomeInfo currentStage={currentStage} />}
+                          </div>
+                      </div>
+                  </div>
+              </React.Fragment>
           ) : (
-            <React.Fragment>
-              <img src={cloud} className='thought-bubble' alt="" />
-              <div className='text-black info-box absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                {currentStage && <HomeInfo currentStage={currentStage} />}
-              </div>
-            </React.Fragment>
-          )}  
-        </div>
+              <React.Fragment>
+                  <div className='float absolute float-animation z-10 flex items-center justify-center'>
+                      <div className="relative">
+                          <img src={cloud} className='thought-bubble' alt="" />
+                          <div className='text-black info-box absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                              {currentStage && <HomeInfo currentStage={currentStage} />}
+                          </div>
+                      </div>
+                  </div>
+              </React.Fragment>
+          )
       ) : null }
-      </div>
+
 
       <Canvas
         className={`w-full h-screen bg-transparent ${
