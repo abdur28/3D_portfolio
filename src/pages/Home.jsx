@@ -74,7 +74,7 @@ const Home = () => {
     document.body.style.overflow = 'hidden';
     if (window.innerWidth < 768) {
       screenScale = [0.7, 0.7, 0.7];
-      screenPosition = [0, -4.5, -43.4];
+      screenPosition = [0, -7, -43.4];
     } else {
       screenScale = [1.2, 1.2, 1.2];
       screenPosition = [0, -6.5, -43.4];
