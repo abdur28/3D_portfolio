@@ -26,7 +26,8 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
-import thoughtBubble from './thought-bubble.png'
+import asteroid from './asteroid.png'
+import cloud from './cloud.png'
 
 export {
     css,
@@ -57,5 +58,6 @@ export {
     contact,
     soundon,
     soundoff,
-    thoughtBubble
+    asteroid,
+    cloud
 }

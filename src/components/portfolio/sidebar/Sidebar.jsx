@@ -50,7 +50,7 @@ const Sidebar = () => {
   variants.closed.clipPath = clipPath;
 
   return (
-    <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+    <motion.div className="sidebar" animate={open ? "open" : "closed"} initial="closed">
       <motion.div className="bg" animate={open ? "open" : "closed"} variants={variants}>
         <Links />
       </motion.div>

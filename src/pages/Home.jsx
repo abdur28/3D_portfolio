@@ -1,8 +1,9 @@
 import { Canvas } from "@react-three/fiber";
+import React from 'react';
 import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/beauty.mp3";
 import { HomeInfo, Loader } from "../components";
-import { soundoff, soundon, thoughtBubble } from "../assets/icons";
+import { soundoff, soundon, asteroid, cloud } from "../assets/icons";
 import { StarsCanvas } from "../models/canvas";
 import { Island, Plane, Sky, Rocket } from "../models";
 
@@ -31,17 +32,20 @@ const Home = () => {
     // Apply dark theme when isDarkTheme state changes
     if (isDarkTheme) {
       document.body.classList.add("dark");
+    
     } else {
       document.body.classList.remove("dark");
+  
     }
   }, [isDarkTheme]);
+  
 
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
 
     // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
+      screenScale = [1, 1, 1];
       screenPosition = [0, -1.5, 0];
     } else {
       screenScale = [3, 3, 3];
@@ -53,10 +57,10 @@ const Home = () => {
 
   const adjustRocketForScreenSize = () => {
     let screenScale, screenPosition;
-    // If screen width is less than 768px, adjust the scale and position
+    document.body.style.overflow = 'hidden';
     if (window.innerWidth < 768) {
-      screenScale = [0.006, 0.006, 0.006];
-      screenPosition = [0, -2.5, 0];
+      screenScale = [0.004, 0.004, 0.004];
+      screenPosition = [0, -1.8, 0];
     } else {
       screenScale = [0.012, 0.012, 0.012];
       screenPosition = [0, -4.5, -4];
@@ -69,8 +73,8 @@ const Home = () => {
     let screenScale, screenPosition;
     document.body.style.overflow = 'hidden';
     if (window.innerWidth < 768) {
-      screenScale = [1, 1, 1];
-      screenPosition = [0, -6.5, -43.4];
+      screenScale = [0.7, 0.7, 0.7];
+      screenPosition = [0, -4.5, -43.4];
     } else {
       screenScale = [1.2, 1.2, 1.2];
       screenPosition = [0, -6.5, -43.4];
@@ -90,15 +94,26 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative overflow-hidden'>
-      <div className='float-animation absolute top-20 z-10 flex items-center justify-center'>
-        {currentStage ? (
+      <div className='float-animation absolute z-10 flex items-center justify-center'>
+      {currentStage ? (
         <div className="relative">
-          <img src={thoughtBubble} className="thought-bubble" alt="" />
-          <div className="info-box absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            {currentStage && <HomeInfo currentStage={currentStage} />}
-          </div>
+          {isDarkTheme ? (
+            <React.Fragment>
+              <img src={asteroid} className='thought-bubble' alt="" />
+              <div className='text-white asteroid-padding info-box absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                {currentStage && <HomeInfo currentStage={currentStage} />}
+              </div>
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <img src={cloud} className='thought-bubble' alt="" />
+              <div className='text-black info-box absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                {currentStage && <HomeInfo currentStage={currentStage} />}
+              </div>
+            </React.Fragment>
+          )}  
         </div>
-        ): null }
+      ) : null }
       </div>
 
       <Canvas
@@ -128,7 +143,7 @@ const Home = () => {
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
             position={islandPosition}
-            rotation={[0.1, 4.7077, 0]}
+            rotation={[0.2, 4.7077, 0]}
             scale={islandScale}
           />
 
@@ -148,7 +163,7 @@ const Home = () => {
       </Canvas>
       {isDarkTheme ? <StarsCanvas/> : null}
 
-      <div className='absolute bottom-2 left-2'>
+      <div className='absolute bottom-11 lg:bottom-2 left-2'>
         <img
           src={!isPlayingMusic ? soundoff : soundon}
           alt='jukebox'
@@ -156,7 +171,7 @@ const Home = () => {
           className='w-10 h-10 cursor-pointer object-contain'
         />
       </div>
-      <div className="absolute bottom-2 right-2">
+      <div className="absolute bottom-12 lg:bottom-2 right-2">
         <label className="theme-switch">
           <input type="checkbox" className="theme-switch__checkbox" onChange={toggleTheme} />
           <div className="theme-switch__container">

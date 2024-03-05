@@ -73,6 +73,7 @@
     right: 0;
 
     @include mobile {
+      left: 7vw;
       height: 50%;
       width: 100%;
       top: unset;
