@@ -163,7 +163,7 @@ const Home = () => {
       </Canvas>
       {isDarkTheme ? <StarsCanvas/> : null}
 
-      <div className='absolute bottom-11 lg:bottom-2 left-2'>
+      <div className='fixed bottom-2 left-2'>
         <img
           src={!isPlayingMusic ? soundoff : soundon}
           alt='jukebox'
@@ -171,7 +171,7 @@ const Home = () => {
           className='w-10 h-10 cursor-pointer object-contain'
         />
       </div>
-      <div className="absolute bottom-12 lg:bottom-2 right-2">
+      <div className="fixed bottom-2 right-2">
         <label className="theme-switch">
           <input type="checkbox" className="theme-switch__checkbox" onChange={toggleTheme} />
           <div className="theme-switch__container">
