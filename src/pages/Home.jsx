@@ -67,7 +67,7 @@ const Home = () => {
 
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
-
+    document.body.style.overflow = 'hidden';
     if (window.innerWidth < 768) {
       screenScale = [1, 1, 1];
       screenPosition = [0, -6.5, -43.4];
@@ -78,7 +78,8 @@ const Home = () => {
 
     return [screenScale, screenPosition];
   };
-
+  
+  document.body.style.overflow = 'hidden';
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
   const [rocketScale, rocketPosition] = adjustRocketForScreenSize();
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
