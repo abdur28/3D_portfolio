@@ -1,19 +1,14 @@
 @import "../../../pages/portfolio.scss";
 
 .contact {
-  padding-top: 100px;
-  height: 100%;
-  max-width: 1366px;
-  margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 50px;
+  height: 100vh; 
+  padding: 7vw;
 
   @include mobile {
-    width: 100%;
-    padding: 10px;
-    
   }
 
   .textContainer {
@@ -26,12 +21,12 @@
 
     @include mobile {
       gap: 10px;
-      margin-top: 70px;
+      // margin-top: 70px;
     }
 
     h1 {
       font-size: 70px;
-      line-height: 88px;
+      // line-height: 88px;
 
       @include mobile {
         font-size: 36px;
@@ -121,7 +116,7 @@
     align-items: center;
 
     @include mobile {
-      padding: 40px;
+      padding: 20vw;
       width: 100%;
     }
 
@@ -130,6 +125,14 @@
       stroke: rgb(79, 115, 139);
       margin: auto;
       z-index: -1;
+    }
+  }
+
+  .footer{
+    margin-bottom: -8vw;
+    @include mobile{
+
+      margin-bottom: -15vw;
     }
   }
 

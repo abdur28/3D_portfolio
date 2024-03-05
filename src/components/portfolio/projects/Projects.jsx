@@ -61,7 +61,7 @@ const Single = ({ item }) => {
   return (
     <section >
       <div className="container">
-        <div className="wrapper">
+        <div className="wrapper top-1/2">
           <Tilt options={{
             max: 45,
             scale: 1,

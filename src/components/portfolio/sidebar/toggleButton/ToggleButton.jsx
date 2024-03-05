@@ -1,10 +1,6 @@
 import { motion } from "framer-motion";
 
 const ToggleButton = ({ setOpen }) => {
-  let variant = null; // Define your initial variant value
-  if (variant === null) {
-    variant = "closed"; // Set variant to "closed" if it is initially null
-  }
 
   return (
     <div className="button-div">
@@ -14,11 +10,10 @@ const ToggleButton = ({ setOpen }) => {
             strokeWidth="3"
             stroke="black"
             strokeLinecap="round"
-            variants={{
+            variants={{           
               closed: { d: "M 2 2.5 L 20 2.5" },
               open: { d: "M 3 16.5 L 17 2.5" },
             }}
-            initial={variant} // Set the initial variant here
           />
           <motion.path
             strokeWidth="3"
@@ -29,7 +24,6 @@ const ToggleButton = ({ setOpen }) => {
               closed: { opacity: 1 },
               open: { opacity: 0 },
             }}
-            initial={variant} // Set the initial variant here
           />
           <motion.path
             strokeWidth="3"
@@ -38,8 +32,7 @@ const ToggleButton = ({ setOpen }) => {
             variants={{
               closed: { d: "M 2 16.346 L 20 16.346" },
               open: { d: "M 3 2.5 L 17 16.346" },
-            }}
-            initial={variant} // Set the initial variant here
+            }}          
           />
         </svg>
       </button>

@@ -5,24 +5,24 @@ import { arrow } from "../assets/icons";
 const HomeInfo = ({ currentStage }) => {
   if (currentStage === 1)
     return (
-      <h1 className='comics-neue-font text-black md:text-xl text-center'>
+      <p className='comics-neue-font  text-center'>
         Hi, I'm
         <span className='name'><b> Abdurrahman</b></span>
         <span className="animate-wave">👋</span>
         <br />
         Swipe left to explore 
         {/* <img src={arrow} alt='arrow' className='ml-10 w-4 h-5 object-contain' /> */}
-      </h1>
+      </p>
     );
 
   if (currentStage === 2) {
     return (
       <div>
-        <p className='comics-neue-font text-center md:text-xl text-black'>
+        <p className='comics-neue-font text-center '>
           I'm a full-stack developer.
         </p>
         
-        <Link to='/portfolio' className='comics-neue-font md:text-xl'>
+        <Link to='/portfolio' className='comics-neue-font '>
           <button className="link-button">
               My Portfolio
           </button>    
@@ -50,11 +50,11 @@ const HomeInfo = ({ currentStage }) => {
   if (currentStage === 3) {
     return (
       <div>
-      <p className='comics-neue-font text-center md:text-xl text-black'>
+      <p className='comics-neue-font text-center '>
         What are you waiting for?
       </p>
       
-      <Link to='/contact' className='comics-neue-font md:text-xl'>
+      <Link to='/contact' className=''>
         <button className="link-button">
             Contact Me
         </button>    

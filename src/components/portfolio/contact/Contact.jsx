@@ -105,7 +105,10 @@ const Contact = () => {
         </motion.div>
         
       </div>
-      <Footer/>
+      <div className='footer'>
+        <Footer/>
+      </div>
+      
 
       
     </motion.div>
