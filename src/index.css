@@ -151,14 +151,14 @@
 @media (max-width: 768px) {
   .float-animation {
     left: 1vw; 
-    padding-top: 18vh; 
+    padding-top: 15vh; 
   }
   .thought-bubble {
     width: 60vw;
   }
 
   .info-box p {
-    font-size: 3.2vw;
+    font-size: 3.8vw;
   }
 
   .asteroid-padding{
@@ -169,8 +169,8 @@
   }
   .link-button {
     padding: 4px 8px;
-    left: 7vw; 
-    font-size: 2vw;
+    left: 4.5vw; 
+    font-size: 2.5vw;
     margin-top: 1vh; 
   }
 }
