@@ -5,7 +5,7 @@ import { arrow } from "../assets/icons";
 const HomeInfo = ({ currentStage }) => {
   if (currentStage === 1)
     return (
-      <p className='comics-neue-font  text-center'>
+      <p className=' text-center'>
         Hi, I'm
         <span className='name'><b> Abdurrahman</b></span>
         <span className="animate-wave">👋</span>
@@ -18,11 +18,11 @@ const HomeInfo = ({ currentStage }) => {
   if (currentStage === 2) {
     return (
       <div>
-        <p className='comics-neue-font text-center '>
+        <p className=' text-center '>
           I'm a full-stack developer.
         </p>
         
-        <Link to='/portfolio' className='comics-neue-font '>
+        <Link to='/portfolio' className=' '>
           <button className="link-button">
               My Portfolio
           </button>    
@@ -50,7 +50,7 @@ const HomeInfo = ({ currentStage }) => {
   if (currentStage === 3) {
     return (
       <div>
-      <p className='comics-neue-font text-center '>
+      <p className=' text-center '>
         What are you waiting for?
       </p>
       
