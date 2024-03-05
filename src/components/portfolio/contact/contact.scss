@@ -6,9 +6,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh; 
-  padding: 7vw;
+  padding-top: 10vw;
 
   @include mobile {
+    padding-top: 25vw;
   }
 
   .textContainer {
@@ -21,7 +22,7 @@
 
     @include mobile {
       gap: 10px;
-      // margin-top: 70px;
+      margin-top: 10vh;
     }
 
     h1 {
@@ -100,7 +101,7 @@
 
   .svg{
     padding-top: 0px;
-    padding-right: 40px;
+    padding-right: 50px;
     width: 130%;
 
     @include mobile{
@@ -128,12 +129,5 @@
     }
   }
 
-  .footer{
-    margin-bottom: -8vw;
-    @include mobile{
-
-      margin-bottom: -15vw;
-    }
-  }
 
 }
