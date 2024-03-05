@@ -114,10 +114,10 @@
   cursor: pointer;
   position: relative;
   padding: 8px 16px;
-  color: rgb(193, 163, 98);
+  color: rgb(8, 8, 8);
   border: 2px solid rgb(193, 163, 98);
   border-radius: 34px;
-  background-color: transparent;
+  background-color: rgb(193, 163, 98);
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
   overflow: hidden;
@@ -142,9 +142,9 @@
 }
 
 .link-button:hover {
-  color: #212121;
+  color: #f0f0f0;
   scale: 1.1;
-  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4);
 }
 
 .link-button:active {

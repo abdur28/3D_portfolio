@@ -47,7 +47,7 @@ const Hero = () => {
     // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
       screenScale = [3.7, 3.7, 3.7];
-      screenPosition = [0, -4.8, 0];
+      screenPosition = [0.3, -4.8, 0];
     } else {
       screenScale = [6.5, 6.5, 6.5];
       screenPosition = [0.8, -9, -4];
