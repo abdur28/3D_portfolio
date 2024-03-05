@@ -53,6 +53,15 @@
         // padding-top: 70px;
       }
 
+      @media (max-width: 450px) {
+        top: 0;
+        flex-direction: column;
+        gap: 10vw;
+        padding-top: 200px;
+      }
+
+
+
       .imageContainer {
         flex: 1;
         // height: 50%;
