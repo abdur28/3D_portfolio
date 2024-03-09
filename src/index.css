@@ -77,6 +77,12 @@
   }
 }
 
+.swiping-animation{
+  top: 5vw;
+  left: 10vw;
+  max-width: 15vw;
+}
+
 .thought-bubble {
   /* top: 20vh; */
   width: 28vw; 
@@ -100,7 +106,7 @@
 }
 
 .name{
-  color: rgb(34, 60, 95);
+  font-size: 2vw;
 }
 
 .info-box p {
@@ -165,10 +171,19 @@
     font-size: 3vw;
   }
 
+  .name{
+    font-size: 3.3vw;
+  }
+
   .asteroid-padding{
     width: 35vw;
   }
 
+  .swiping-animation{
+    top: 10vw;
+    left: 40vw;
+    max-width: 20vw;
+  }
 
   .link-button {
     padding: 4px 8px;
@@ -192,6 +207,11 @@
     font-size: 3.8vw;
   }
 
+  .name{
+    font-size: 4.1vw;
+  }
+
+
   .asteroid-padding{
     width: 50vw;
   }
@@ -202,15 +222,20 @@
     font-size: 2.5vw;
     margin-top: 1vh; 
   }
+  .swiping-animation{
+    top: 15vw;
+    left: 40vw;
+    max-width: 20vw;
+  }
 }
 
 
-.phoneSvg {
+/* .phoneSvg {
   stroke: orange;
   position: absolute;
   margin: auto;
   z-index: -1;
-}
+} */
 
 .my-logo{
   border-radius: 10px;
