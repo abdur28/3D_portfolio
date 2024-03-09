@@ -133,8 +133,14 @@
 
     .phoneSvg {
       stroke: rgb(79, 115, 139);
-      // margin: auto;
       z-index: -1;
+      position: absolute;
+
+      z-index: -1;
+
+      @include mobile{
+        position: relative;
+      }
     }
   }
 
