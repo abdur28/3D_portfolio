@@ -208,7 +208,7 @@
   }
 
   .name{
-    font-size: 4.1vw;
+    font-size: 4.2vw;
   }
 
 
@@ -223,9 +223,9 @@
     margin-top: 1vh; 
   }
   .swiping-animation{
-    top: 15vw;
+    top: 55vw;
     left: 40vw;
-    max-width: 20vw;
+    max-width: 22vw;
   }
 }
 
