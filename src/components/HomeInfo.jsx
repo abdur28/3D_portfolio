@@ -9,8 +9,8 @@ const HomeInfo = ({ currentStage }) => {
         Hi, I'm
         <span className='name'><b> Abdurrahman</b></span>
         <span className="animate-wave">👋</span>
-        <br />
-        Swipe left to explore 
+        {/* <br />
+        Swipe left to explore  */}
         {/* <img src={arrow} alt='arrow' className='ml-10 w-4 h-5 object-contain' /> */}
       </p>
     );

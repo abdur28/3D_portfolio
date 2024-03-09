@@ -28,6 +28,7 @@ import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import asteroid from './asteroid.png'
 import cloud from './cloud.png'
+import swiping from './swiping.gif'
 
 export {
     css,
@@ -59,5 +60,6 @@ export {
     soundon,
     soundoff,
     asteroid,
-    cloud
+    cloud, 
+    swiping
 }

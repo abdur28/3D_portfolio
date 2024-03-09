@@ -6,17 +6,25 @@ import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon, asteroid, cloud } from "../assets/icons";
 import { StarsCanvas } from "../models/canvas";
 import { Island, Plane, Sky, Rocket } from "../models";
-
+import Lottie from 'lottie-react';
+import swipeAnimation from '../assets/IlNHdbTIuH.json';
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
 
-  const [currentStage, setCurrentStage] = useState(1);
+  const [currentStage, setCurrentStage] = useState(null);
   const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
+
+
+  useEffect(() => {
+    if(isRotating) {
+      document.getElementById('swiping-animation').classList.add('hidden')
+    }
+  })
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -94,6 +102,9 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative overflow-hidden'>
+      <div id='swiping-animation' className="swiping-animation absolute z-10 flex items-center justify-center">
+        <Lottie animationData={swipeAnimation}/>
+      </div>
       
       {currentStage ? (
           isDarkTheme ? (
@@ -105,7 +116,7 @@ const Home = () => {
                               {currentStage && <HomeInfo currentStage={currentStage} />}
                           </div>
                       </div>
-                  </div>
+                  </div>   
               </React.Fragment>
           ) : (
               <React.Fragment>
