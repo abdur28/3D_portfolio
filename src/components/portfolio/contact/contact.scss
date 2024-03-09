@@ -6,9 +6,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh; 
+  gap: 5vw;
   padding-top: 10vw;
 
   @include mobile {
+    gap: 0;
     padding-top: 25vw;
   }
 
@@ -30,7 +32,7 @@
     @media (max-width: 450) {
       padding-bottom: 0;
       gap: 10px;
-      margin-top: 10vh;
+      margin-top: 20vh;
     }
 
     h1 {
