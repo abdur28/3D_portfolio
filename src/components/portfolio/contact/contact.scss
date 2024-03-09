@@ -112,11 +112,11 @@
     padding-left: 0vw;
     width: 100%;
 
-    @include mobile{
-      width: 100%;
-      // padding-left: 20vw;
-      padding-top: 150px;
-    }
+    // @include mobile{
+    //   width: 100%;
+    //   // padding-left: 20vw;
+    //   padding-top: 0px;
+    // }
   }
 
   .formContainer {
@@ -136,11 +136,6 @@
       z-index: -1;
       position: absolute;
 
-      z-index: -1;
-
-      @include mobile{
-        position: relative;
-      }
     }
   }
 
