@@ -223,9 +223,9 @@
     margin-top: 1vh; 
   }
   .swiping-animation{
-    top: 55vw;
+    top: 30vw;
     left: 40vw;
-    max-width: 22vw;
+    max-width: 25vw;
   }
 }
 
