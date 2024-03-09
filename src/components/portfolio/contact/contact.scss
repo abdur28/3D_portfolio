@@ -114,8 +114,8 @@
 
     @include mobile{
       width: 70%;
-      padding-left: 15vw;
-      padding-top: 40px;
+      padding-left: 20vw;
+      padding-top: 60px;
     }
   }
 
@@ -133,7 +133,7 @@
 
     .phoneSvg {
       stroke: rgb(79, 115, 139);
-      margin: auto;
+      // margin: auto;
       z-index: -1;
     }
   }
