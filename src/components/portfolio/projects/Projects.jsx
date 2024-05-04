@@ -10,7 +10,7 @@ const items = [
     id: 1,
     title: "Photography Website",
     img: `${jjphoto}`,
-    link: 'https://puce-distinct-pangolin.cyclic.app/',
+    link: 'https://jerryjphotography.com/',
     desc: "A photography portfolio website with showcases the artist's work, providing a visually stunning platform to exhibit their photography skills and creative vision. Visitors can browse through various galleries and contact the photographer for inquiries or bookings. It also includes an admin route for the photographer to manage and update their portfolio content.",
     tags: [{name:'Node.JS', color:'green'}, {name:'AWS', color:'orange'}, {name:'MongoDB', color:'light-green'}, {name:'Redis', color:'red'}, {name:'TailwindCSS', color:'light-blue'}]
   },
