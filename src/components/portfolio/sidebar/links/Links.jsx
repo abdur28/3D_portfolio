@@ -28,7 +28,7 @@ const itemVariants = {
 
 const Links = () => {
   const location = useLocation();
-  const items = ["Homepage", "Portfolio", "Contact"];
+  const items = ["World", "Portfolio", "Contact"];
   const subItems = ['About', 'Skills', 'Projects', 'Contact'];
 
   return (

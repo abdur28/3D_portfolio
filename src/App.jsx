@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { Footer, Navbar } from "./components";
 import { Portfolio, Contact, Home } from "./pages";
+import World from "./pages/World";
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
             element={
               <>
                 <Routes>
+                  <Route path='/world' element={<World />} />
                   <Route path='/portfolio' element={<Portfolio />} />
                   <Route path='/contact' element={<Contact />} />
                 </Routes>
