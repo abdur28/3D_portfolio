@@ -146,7 +146,7 @@ const Contact = () => {
                   </button>
                 </div>
                 <div className="whatapp-container flex ">
-                  <button>
+                  <button type="button">
                     <a className="transition duration-300 hover:opacity-75" href="https://wa.me/+79014273968?text=Hello%20from%20your%20website" target="_blank" rel="noreferrer">
                         <span className="sr-only">WhatsApp</span>
                         <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
