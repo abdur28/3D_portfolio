@@ -22,6 +22,7 @@ import {
     php,
     laravel,
   } from "../assets";
+  import {nextjs} from "../assets/icons"
   
   
   const technologies = [
@@ -46,6 +47,10 @@ import {
       icon: nodejs,
     },
     {
+      name: "Next JS",
+      icon: nextjs,
+    },
+    {
       name: "MongoDB",
       icon: mongodb,
     },
@@ -68,10 +73,6 @@ import {
     {
       name: "Cpp",
       icon: cpp,
-    },
-    {
-      name: "git",
-      icon: git,
     },
     {
       name: "Redis",

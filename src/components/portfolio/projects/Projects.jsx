@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { game, jjphoto, dollar, blog, webApp } from "../../../assets/images";
+import { game, jjphoto, dollar, blog, webApp, tourly, space } from "../../../assets/images";
 import Tilt from 'react-parallax-tilt';
 import { a } from "@react-spring/three";
 
@@ -11,19 +11,44 @@ const items = [
     title: "Photography Website",
     img: `${jjphoto}`,
     link: 'https://jerryjphotography.com/',
-    desc: "A photography portfolio website with showcases the artist's work, providing a visually stunning platform to exhibit their photography skills and creative vision. Visitors can browse through various galleries and contact the photographer for inquiries or bookings. It also includes an admin route for the photographer to manage and update their portfolio content.",
-    tags: [{name:'Node.JS', color:'green'}, {name:'AWS', color:'orange'}, {name:'MongoDB', color:'light-green'}, {name:'Redis', color:'red'}, {name:'TailwindCSS', color:'light-blue'}]
+    desc: "A photography portfolio website that showcases the artist's work, providing a visually stunning platform to exhibit their photography skills and creative vision. Visitors can browse through various galleries and contact the photographer for inquiries or bookings. It also includes an admin route for the photographer to manage and update their portfolio content.",
+    tags: [{name:'Node.JS', color:'green'},{name:'Next.JS', color:'black'}, {name:'AWS', color:'orange'}, {name:'MongoDB', color:'light-green'}, {name:'Redis', color:'red'}, {name:'TailwindCSS', color:'light-blue'}]
   },
   {
     id: 2,
+    title: "Travel Website",
+    img: `${tourly}`,
+    link: 'https://abdur28.github.io/tourly/',
+    tags: [{name:'Node.JS', color:'green'}, {name:'AWS', color:'orange'}, {name:'MongoDB', color:'light-green'},{name:'Redis', color:'red'},{name:'Next.JS', color:'black'}, {name:'TailwindCSS', color:'light-blue'}],
+    desc: "A beautiful, fully responsive travel website that showcases various wonderful locations, allows users to register, book and pay for tour guides"
+  },
+  {
+    id: 3,
+    title: "Newsletter",
+    img: `${dollar}`,
+    link: 'https://dollar-to-rub.cyclic.app/',
+    tags: [{name:'Node.JS', color:'green'}, {name:'Python', color:'light-blue'}, {name:'MongoDB', color:'light-green'}],
+    desc: "A web application that sends daily currency rate exchange to registered users. Users receive timely updates on currency fluctuations via email or notifications."
+  },
+  {
+    id: 4,
+    title: "Business Website Example",
+    img: `${space}`,
+    link: 'https://abdur28.github.io/space-website/',
+    git: 'https://github.com/abdur28/space-website',
+    tags: [{name:'Node.JS', color:'green'}, {name:'Next.JS', color:'black'}, {name:'MongoDB', color:'light-green'}, {name:'TailwindCSS', color:'light-blue'}],
+    desc: "A simple fully responsive example website with a creative design"
+  },
+  {
+    id: 5,
     title: "3D Web App",
     img: `${webApp}`,
-    link: '/',
+    link: '/world',
     tags: [{name:'React.JS', color:'sky-blue'}, {name:'WebGL', color:'red'}, {name:'Three.JS', color:'gray'}, {name:'TailwindCSS', color:'light-blue'}],
     desc: "A 3D web app built with three.js offers immersive experiences with interactive 3D graphics and animations. Users can explore virtual environments and interact with objects in real-time directly from their web browsers.",
   },
   {
-    id: 3,
+    id: 6,
     title: "Blog Website",
     img: `${blog}`,
     git: 'https://github.com/abdur28/blog_with_users',
@@ -31,16 +56,7 @@ const items = [
     desc: "A blog web platform that allows users to register and login, enabling them to access personalized features such as commenting, bookmarking posts, and receiving tailored recommendations based on their interests.",
   },
   {
-    id: 4,
-    title: "Newsletter ",
-    img: `${dollar}`,
-    link: 'https://dollar-to-rub.cyclic.app/',
-    git: 'https://github.com/abdur28/dollar_to_rub',
-    tags: [{name:'Node.JS', color:'green'}, {name:'Python', color:'light-blue'}, {name:'MongoDB', color:'light-green'}],
-    desc: "A web application that sends daily currency rate exchange to registered users. Users receive timely updates on currency fluctuations via email or notifications."
-  },
-  {
-    id: 5,
+    id: 7,
     title: "Games",
     img: `${game}`,
     git: 'https://github.com/abdur28/spaceship-wars-game',

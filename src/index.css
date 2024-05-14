@@ -878,3 +878,6 @@ body:has(.card[data-color="green"]:hover) {
   transform: translate(0, 5%);
 }
 
+.whatapp-container:hover {
+  color: green;
+}
