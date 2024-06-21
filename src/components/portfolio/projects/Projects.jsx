@@ -16,6 +16,14 @@ const items = [
   },
   {
     id: 2,
+    title: "3D Web App",
+    img: `${webApp}`,
+    link: 'https://graphic-designer-portfolio2.vercel.app/',
+    tags: [{name:'React.JS', color:'sky-blue'}, {name:'WebGL', color:'red'}, {name:'Three.JS', color:'gray'}, {name:'TailwindCSS', color:'light-blue'}],
+    desc: "A 3D web app built with three.js offers immersive experiences with interactive 3D graphics and animations. Users can explore virtual environments and interact with objects in real-time directly from their web browsers.",
+  },
+  {
+    id: 3,
     title: "Travel Website",
     img: `${tourly}`,
     link: 'https://abdur28.github.io/tourly/',
@@ -23,7 +31,7 @@ const items = [
     desc: "A beautiful, fully responsive travel website that showcases various wonderful locations, allows users to register, book and pay for tour guides"
   },
   {
-    id: 3,
+    id: 4,
     title: "Newsletter",
     img: `${dollar}`,
     link: 'https://dollar-to-rub.cyclic.app/',
@@ -31,21 +39,13 @@ const items = [
     desc: "A web application that sends daily currency rate exchange to registered users. Users receive timely updates on currency fluctuations via email or notifications."
   },
   {
-    id: 4,
+    id: 5,
     title: "Business Website Example",
     img: `${space}`,
     link: 'https://abdur28.github.io/space-website/',
     git: 'https://github.com/abdur28/space-website',
     tags: [{name:'Node.JS', color:'green'}, {name:'Next.JS', color:'black'}, {name:'MongoDB', color:'light-green'}, {name:'TailwindCSS', color:'light-blue'}],
     desc: "A simple fully responsive example website with a creative design"
-  },
-  {
-    id: 5,
-    title: "3D Web App",
-    img: `${webApp}`,
-    link: '/world',
-    tags: [{name:'React.JS', color:'sky-blue'}, {name:'WebGL', color:'red'}, {name:'Three.JS', color:'gray'}, {name:'TailwindCSS', color:'light-blue'}],
-    desc: "A 3D web app built with three.js offers immersive experiences with interactive 3D graphics and animations. Users can explore virtual environments and interact with objects in real-time directly from their web browsers.",
   },
   {
     id: 6,
