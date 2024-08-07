@@ -11,6 +11,7 @@ import Parallax from "../components/portfolio/parallax/Parallax";
 import Projects from "../components/portfolio/projects/Projects";
 import About from "../components/portfolio/about/About";
 import Skills from "../components/portfolio/skills/Skills";
+import Certificates from "../components/portfolio/certificates/Certificates";
 
 const Portfolio = () => {
   return (
@@ -30,6 +31,12 @@ const Portfolio = () => {
       </section>
       <section>
         <Skills />
+      </section>
+      <section id="certificates">
+        <Parallax type="What I've done" />
+      </section>
+      <section>
+        <Certificates />
       </section>
       <section id="projects">
         <Parallax type="What I do" />
