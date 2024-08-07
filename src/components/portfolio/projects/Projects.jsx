@@ -1,13 +1,21 @@
 import { useRef } from "react";
 import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { game, jjphoto, dollar, blog, webApp, tourly, space } from "../../../assets/images";
+import { game, jjphoto, dollar, blog, webApp, tourly, space, stylesavant } from "../../../assets/images";
 import Tilt from 'react-parallax-tilt';
 import { a } from "@react-spring/three";
 
 const items = [
   {
     id: 1,
+    title: "E-commerce Web App",
+    img: `${stylesavant}`,
+    link: 'https://stylesavant.netlify.app/',
+    desc: "A complete e-commerce business management platform that offers a range of features with easy authentication and secure online payment. It allows users to create their own account and purchase various products. It also includes a custom admin route for the business owner to manage and update their products and orders. ",
+    tags: [{name:'Node.JS', color:'green'}, {name:'React.JS', color:'sky-blue'}, {name:'Next.JS', color:'black'}, {name:'MongoDB', color:'light-green'}, {name:'TailwindCSS', color:'light-blue'}, {name:'Clerk', color:'blue'}, {name:'PayStack', color:'light-blue'}]
+  },
+  {
+    id: 2,
     title: "Photography Website",
     img: `${jjphoto}`,
     link: 'https://jerryjphotography.com/',
@@ -15,7 +23,7 @@ const items = [
     tags: [{name:'Node.JS', color:'green'},{name:'Next.JS', color:'black'}, {name:'AWS', color:'orange'}, {name:'MongoDB', color:'light-green'}, {name:'Redis', color:'red'}, {name:'TailwindCSS', color:'light-blue'}]
   },
   {
-    id: 2,
+    id: 3,
     title: "3D Web App",
     img: `${webApp}`,
     link: 'https://graphic-designer-portfolio2.vercel.app/',
@@ -23,7 +31,7 @@ const items = [
     desc: "A 3D web app built with three.js offers immersive experiences with interactive 3D graphics and animations. Users can explore virtual environments and interact with objects in real-time directly from their web browsers.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Travel Website",
     img: `${tourly}`,
     link: 'https://abdur28.github.io/tourly/',
@@ -31,7 +39,7 @@ const items = [
     desc: "A beautiful, fully responsive travel website that showcases various wonderful locations, allows users to register, book and pay for tour guides"
   },
   {
-    id: 4,
+    id: 5,
     title: "Newsletter",
     img: `${dollar}`,
     link: 'https://dollar-to-rub.cyclic.app/',
@@ -39,21 +47,13 @@ const items = [
     desc: "A web application that sends daily currency rate exchange to registered users. Users receive timely updates on currency fluctuations via email or notifications."
   },
   {
-    id: 5,
-    title: "Business Website Example",
+    id: 6,
+    title: "Saas Landing Page",
     img: `${space}`,
     link: 'https://abdur28.github.io/space-website/',
     git: 'https://github.com/abdur28/space-website',
     tags: [{name:'Node.JS', color:'green'}, {name:'Next.JS', color:'black'}, {name:'MongoDB', color:'light-green'}, {name:'TailwindCSS', color:'light-blue'}],
     desc: "A simple fully responsive example website with a creative design"
-  },
-  {
-    id: 6,
-    title: "Blog Website",
-    img: `${blog}`,
-    git: 'https://github.com/abdur28/blog_with_users',
-    tags: [{name:'Python', color:'light-blue'}, {name:'Flask', color:'gray'}, {name:'MySQL', color:'blue'}, {name:'BootstrapCSS', color:'purple'}],
-    desc: "A blog web platform that allows users to register and login, enabling them to access personalized features such as commenting, bookmarking posts, and receiving tailored recommendations based on their interests.",
   },
   {
     id: 7,
