@@ -69,14 +69,11 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>Abdurrahman Idris</motion.h2>
           <motion.h1 variants={textVariants}>
-            Full Stack Developer
+            Software Engineer
           </motion.h1>
-          {/* <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div> */}
+          <motion.h3 variants={textVariants} className="subtitle">
+            Full Stack Developer | Founder of Residity | Robotics Engineer
+          </motion.h3>
           <motion.img
             variants={textVariants}
             animate="scrollButton"
@@ -91,7 +88,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Developer Frontend Backend
+        Developer Entrepreneur Leader
       </motion.div>
       <div className="imageContainer">
         <Canvas
