@@ -38,9 +38,9 @@ const ResidityShowcase = () => {
 
   // Replace with actual screenshots/mockups of Residity
   const residityScreenshots = [
-    "/path/to/residity-screenshot1.jpg",
-    "/path/to/residity-screenshot2.jpg",
-    "/path/to/residity-screenshot3.jpg",
+    "/screenshot-1.png",
+    "/screenshot-2.png",
+    "/screenshot-3.png",
   ];
 
   const features = [
@@ -88,6 +88,9 @@ const ResidityShowcase = () => {
     >
       <div className="container">
         <div className="content">
+          <div className="residity-logo">
+            <img src="/residity-icon.png" alt="Residency Logo"  className="residency-icon"/>
+          </div>
           <h1 className="title">Founder & Lead Developer at Residity</h1>
           <h2 className="subtitle">Real Estate Platform</h2>
           
