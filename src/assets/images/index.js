@@ -17,6 +17,7 @@ import certificateWeb from './certificate-web.png'
 import certificateReact from './certificate-react.png'
 import certificateJs from './certificate-js.png'
 import certificateBackend from './certificate-backend.png'
+import Residity from './Residity.png'
 
 export {
     logo,
@@ -37,5 +38,6 @@ export {
     certificateWeb,
     certificateReact,
     certificateJs,
-    certificateBackend
+    certificateBackend,
+    Residity,
 }

@@ -1,11 +1,26 @@
 import { useRef } from "react";
 import "./projects.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { game, jjphoto, dollar, blog, webApp, tourly, space, stylesavant } from "../../../assets/images";
+import { game, jjphoto, dollar, blog, webApp, tourly, space, stylesavant, Residity } from "../../../assets/images";
 import Tilt from 'react-parallax-tilt';
-import { a } from "@react-spring/three";
 
 const items = [
+  {
+    id: 0,
+    title: "Residity Real Estate Platform",
+    img: `${Residity}`,
+    link: 'https://residity.com/',
+    desc: "A comprehensive real estate platform connecting property buyers, sellers, and agents. Features include property listings, advanced search with geolocation, real-time chat, secure payments, agent verification, and analytics dashboards for business intelligence.",
+    tags: [
+      {name: 'React Native', color: 'sky-blue'}, 
+      {name: 'Node.js', color: 'green'}, 
+      {name: 'Firebase', color: 'orange'}, 
+      {name: 'Next.js', color: 'black'}, 
+      {name: 'TypeScript', color: 'blue'}, 
+      {name: 'TailwindCSS', color: 'light-blue'},
+      {name: 'Google Maps', color: 'red'},
+    ]
+  },
   {
     id: 1,
     title: "E-commerce Web App",
@@ -90,7 +105,7 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <div className="flex flex-row gap-2 pt-2">
+            <div className="flex flex-row flex-wrap gap-2 pt-2">
               {item.tags.map((tag) => (
                 <p className={`${tag.color}`}>#{tag.name}</p>
               ))}

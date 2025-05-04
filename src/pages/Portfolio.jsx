@@ -6,7 +6,7 @@ import Parallax from "../components/portfolio/parallax/Parallax";
 import Projects from "../components/portfolio/projects/Projects";
 import About from "../components/portfolio/about/About";
 import Skills from "../components/portfolio/skills/Skills";
-import Certificates from "../components/portfolio/certificates/Certificates";
+import Achievements from "../components/portfolio/achievements/Achievements";
 import ResidityShowcase from "../components/portfolio/residity/ResidityShowcase"; // Import the new component
 
 const Portfolio = () => {
@@ -45,11 +45,11 @@ const Portfolio = () => {
         <ResidityShowcase />
       </section>
       
-      <section id="certificates">
+      <section id="achievements">
         <Parallax type="What I've done" />
       </section>
       <section>
-        <Certificates />
+        <Achievements />
       </section>
       <section id="projects">
         <Parallax type="What I do" />
