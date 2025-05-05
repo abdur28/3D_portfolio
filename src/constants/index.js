@@ -21,22 +21,20 @@ import {
     cpp,
     php,
     laravel,
+    expo,
+    firebase
   } from "../assets";
   import {nextjs} from "../assets/icons"
   
   
   const technologies = [
     {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
       name: "JavaScript",
       icon: javascript,
+    },
+    {
+      name: "TypeScript",
+      icon: typescript,
     },
     {
       name: "React JS",
@@ -51,6 +49,14 @@ import {
       icon: nextjs,
     },
     {
+      name: "Expo",
+      icon: expo,
+    },
+    {
+      name: "Firebase",
+      icon: firebase,
+    },
+    {
       name: "MongoDB",
       icon: mongodb,
     },
@@ -63,20 +69,16 @@ import {
       icon: flask,
     },
     {
-      name: "Php",
-      icon: php,
+      name: "Linux",
+      icon: linux,
     },
     {
-      name: "Laravel",
-      icon: laravel,
+      name: "AWS",
+      icon: aws,
     },
     {
-      name: "Cpp",
-      icon: cpp,
-    },
-    {
-      name: "Redis",
-      icon: redis,
+      name: "Docker",
+      icon: docker,
     },
     {
       name: "Tailwind CSS",

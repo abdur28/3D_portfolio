@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 text-center mx-auto">
           <div>
             <div className="flex mx-auto">
-              <div className="mx-auto space-x-6 flex mt-2 text-gray-600 text-gray-300">
+              <div className="mx-auto space-x-6 flex mt-2 text-gray-600 ">
                 <a className="transition duration-300 hover:opacity-75" href="https://wa.me/+79014273968?text=Hello%20from%20your%20website" target="_blank" rel="noreferrer">
                   <span className="sr-only">WhatsApp</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-300 text-center">
-          © 2024 Abdurrahman Idris. All rights reserved.
+          © 2025 Abdurrahman Idris. All rights reserved.
         </p>
       </div>
     </footer>

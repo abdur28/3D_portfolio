@@ -20,6 +20,8 @@ import bash from './tech/bash.png';
 import cpp from './tech/cpp.png';
 import php from './tech/php.png';
 import laravel from './tech/laravel.png';
+import expo from './tech/expo.jpg';
+import firebase from './tech/firebase.png';
  
  
 export {
@@ -44,6 +46,8 @@ export {
     bash,
     cpp,
     php,
-    laravel
+    laravel,
+    expo,
+    firebase
   };
   

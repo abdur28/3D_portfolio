@@ -31,7 +31,7 @@ const Portfolio = () => {
       
       {/* Add the new Residity section */}
       <section id="residity">
-        <Parallax type="My Company" />
+        <Parallax type="Residity" />
       </section>
       <section
       style={{
@@ -48,7 +48,14 @@ const Portfolio = () => {
       <section id="achievements">
         <Parallax type="What I've done" />
       </section>
-      <section>
+      <section 
+      style={{
+        background: "linear-gradient(180deg, #111132, #0c0c1d)",
+        height: "100%",
+        width: "100%",
+        scrollSnapAlign: "center",
+        overflow: "hidden",
+      }}>
         <Achievements />
       </section>
       <section id="projects">

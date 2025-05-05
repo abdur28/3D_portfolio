@@ -178,11 +178,32 @@ const ResidityShowcase = () => {
             ))}
           </div>
           
-          <div className="cta-container">
-            <a href="https://residity.com" target="_blank" rel="noopener noreferrer" className="cta-button">
-              Visit Residity
-            </a>
-          </div>
+          <motion.div 
+            className="cta-container"
+            variants={featureVariants}
+          >
+            <div className="cta-buttons">
+              <a href="https://residity.com" target="_blank" rel="noopener noreferrer" className="cta-button">
+                Visit Residity
+              </a>
+              
+              <a href="https://play.google.com/store/apps/details?id=com.abdur28.myrealestateapp" target="_blank" rel="noopener noreferrer" className="download-button">
+                <img 
+                  src="/google-download.png" 
+                  alt="Download on Google Play" 
+                  className="download-badge"
+                />
+              </a>
+              
+              <a href="https://apps.apple.com/app/residity/id123456789" target="_blank" rel="noopener noreferrer" className="download-button">
+                <img 
+                  src="/apple-download.png" 
+                  alt="Download on App Store" 
+                  className="download-badge"
+                />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.div>

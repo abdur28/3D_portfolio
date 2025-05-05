@@ -1,32 +1,7 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import "./achievements.scss";
-import { motion, useInView } from "framer-motion";
-import { awardWeb, awardJs, awardReact, awardAi, awardAnalysis, awardBackend, certificateWeb, certificateJs, certificateReact, certificateBackend} from "../../../assets/images";
-
-// Container animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-// Item animation variants
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 50,
-      damping: 10
-    }
-  }
-};
+import { motion, useInView, useAnimation } from "framer-motion";
+import { awardWeb, awardJs, awardReact, awardAi, awardAnalysis, awardBackend, certificateWeb, certificateJs, certificateReact, certificateBackend } from "../../../assets/images";
 
 const certificates = [
   {
@@ -73,144 +48,254 @@ const certificates = [
   },
 ];
 
-// Replace with your actual publication information
+// Academic publications
 const publications = [
   {
     id: 1,
-    img: '',
-    title: "Real Estate Market Analysis using Machine Learning",
-    publisher: "International Journal of Real Estate Technology",
-    year: "2023",
-    link: "https://example.com/publication1",
+    title: "Optimizing Rubber Seed Oil Extraction for Biodiesel Production Using Machine Learning Tools",
+    subtitle: "A Comparative Study of Response Surface Methodology and Artificial Neural Networks",
+    journal: "Journal Publication",
+    year: "2025", // Replace with actual year
+    doi: "10.48309/PCBR.2025.510277.1399", // Replace with actual DOI
+    link: "https://www.pcbiochemres.com/article_218044_8648baa3f11562ca24318b1bfb45e4da.pdf" 
   },
   {
     id: 2,
-    img: '',
-    title: "Mobile Application Development for Property Management",
-    publisher: "Journal of Software Engineering",
-    year: "2022",
-    link: "https://example.com/publication2",
+    title: "Optimizing Biodiesel Yield and Fuel Properties from Waste Avocado Oil",
+    subtitle: "A Comparative Study of RSM and ANFIS Machine Learning Models",
+    journal: "Journal Publication",
+    year: "2025", // Replace with actual year
+    doi: "10.48309/pcbr.2025.495665.1389", // Replace with actual DOI
+    link: "https://www.pcbiochemres.com/article_214130_7985d5ab243bc54cb6f3d78bfe55576b.pdf"
   }
 ];
 
-// Replace with your actual award information
-const awards = [
+// Achievements
+const achievements = [
   {
     id: 1,
-    img: '',
-    title: "OpenDoors Olympiad Winner",
-    organization: "OpenDoors International Competition",
-    year: "2021",
-    description: "First place in the Software Development category",
-    link: "https://example.com/opendoors-results",
+    title: "Opendoors Olympiad Winner",
+    organization: "Opendoors",
+    year: "2022", // Replace with actual year
+    description: "Recognized for outstanding performance in the international Opendoors olympiad competition.",
+    link: "#" // Replace with link if available
   }
 ];
 
-const Achievements = () => {
-  const ref = useRef();
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+const titleVariant = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6 }
+  }
+};
+
+const containerVariant = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.5 }
+  }
+};
+
+const AchievementsCertificates = () => {
+  const publicationsRef = useRef();
+  const achievementsRef = useRef();
+  const certificatesRef = useRef();
+  
+  const titleControls = useAnimation();
+  const pubControls = useAnimation();
+  const achieveControls = useAnimation();
+  const certControls = useAnimation();
+  
+  const isPublicationsInView = useInView(publicationsRef, { 
+    once: true,
+    margin: "-100px" 
+  });
+  
+  const isAchievementsInView = useInView(achievementsRef, { 
+    once: true,
+    margin: "-100px" 
+  });
+  
+  const isCertificatesInView = useInView(certificatesRef, { 
+    once: true,
+    margin: "-100px" 
+  });
+
+  // Handle animations only once when elements come into view
+  useEffect(() => {
+    if (isPublicationsInView) {
+      pubControls.start("visible");
+    }
+  }, [isPublicationsInView, pubControls]);
+
+  useEffect(() => {
+    if (isAchievementsInView) {
+      achieveControls.start("visible");
+    }
+  }, [isAchievementsInView, achieveControls]);
+
+  useEffect(() => {
+    if (isCertificatesInView) {
+      certControls.start("visible");
+    }
+  }, [isCertificatesInView, certControls]);
+
+  // Start title animation on mount
+  useEffect(() => {
+    titleControls.start("visible");
+  }, [titleControls]);
 
   return (
-    <motion.div 
-      className="achievements"
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={containerVariants}
-    >
+    <div className="achievements-certificates">
       <div className="container">
-        <h1>My Achievements</h1>
-        
-        {/* Publications Section */}
-        <motion.div 
-          className="section"
-          variants={itemVariants}
+        <motion.h1 
+          className="main-title"
+          initial="hidden"
+          animate={titleControls}
+          variants={titleVariant}
         >
-          <h2 className="section-title">Publications</h2>
-          <div className="content-grid">
+          Achievements & Certifications
+        </motion.h1>
+        
+        {/* Academic Publications Section */}
+        <div ref={publicationsRef} className="publications-section">
+          <motion.h2 
+            className="section-title"
+            initial="hidden"
+            animate={pubControls}
+            variants={titleVariant}
+          >
+            Academic Publications
+          </motion.h2>
+          
+          <motion.div 
+            className="publications-container"
+            variants={containerVariant}
+            initial="hidden"
+            animate={pubControls}
+          >
             {publications.map((publication) => (
               <motion.div
                 key={publication.id}
                 className="publication-card"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                onClick={() => publication.link && window.open(publication.link)}
+                variants={itemVariant}
               >
-                <div className="card-icon">
-                  <img src={publication.img} alt="Publication" />
-                </div>
-                <div className="card-content">
-                  <h3>{publication.title}</h3>
-                  <p>{publication.publisher}</p>
-                  <p className="year">{publication.year}</p>
+                <div className="publication-content">
+                  <h3 className="publication-title">{publication.title}</h3>
+                  <h4 className="publication-subtitle">{publication.subtitle}</h4>
+                  <p className="publication-meta">
+                    {publication.journal} • {publication.year} • DOI: {publication.doi}
+                  </p>
+                  <a 
+                    href={publication.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="view-link"
+                  >
+                    View Publication →
+                  </a>
                 </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
         
-        {/* Awards Section */}
-        <motion.div 
-          className="section"
-          variants={itemVariants}
-        >
-          <h2 className="section-title">Awards & Recognition</h2>
-          <div className="content-grid">
-            {awards.map((award) => (
+        {/* Other Achievements Section */}
+        <div ref={achievementsRef} className="achievements-section">
+          <motion.h2 
+            className="section-title"
+            initial="hidden"
+            animate={achieveControls}
+            variants={titleVariant}
+          >
+            Awards & Recognition
+          </motion.h2>
+          
+          <motion.div 
+            className="achievements-container"
+            variants={containerVariant}
+            initial="hidden"
+            animate={achieveControls}
+          >
+            {achievements.map((achievement) => (
               <motion.div
-                key={award.id}
-                className="award-card"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                onClick={() => award.link && window.open(award.link)}
+                key={achievement.id}
+                className="achievement-card"
+                variants={itemVariant}
               >
-                <div className="card-icon">
-                  <img src={award.img} alt="Award" />
-                </div>
-                <div className="card-content">
-                  <h3>{award.title}</h3>
-                  <p>{award.organization}</p>
-                  <p className="description">{award.description}</p>
-                  <p className="year">{award.year}</p>
+                <div className="achievement-content">
+                  <div className="achievement-badge">🏆</div>
+                  <div className="achievement-details">
+                    <h3 className="achievement-title">{achievement.title}</h3>
+                    <p className="achievement-meta">
+                      {achievement.organization} • {achievement.year}
+                    </p>
+                    <p className="achievement-description">{achievement.description}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
         
         {/* Certificates Section */}
-        <motion.div 
-          className="section"
-          variants={itemVariants}
-        >
-          <h2 className="section-title">Certificates</h2>
-          <div className="certificates-grid">
-            {certificates.map((certificate) => (
+        <div ref={certificatesRef} className="certificates-section">
+          <motion.h2 
+            className="section-title"
+            initial="hidden"
+            animate={certControls}
+            variants={titleVariant}
+          >
+            Technical Certifications
+          </motion.h2>
+          
+          <motion.div 
+            className="certificates-container"
+            variants={containerVariant}
+            initial="hidden"
+            animate={certControls}
+          >
+            {certificates.map((certificate, index) => (
               <motion.div
                 key={certificate.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 50, damping: 10 } }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                viewport={{ once: true }}
+                className="certificate-item-wrapper"
+                variants={itemVariant}
+                whileHover={{ 
+                  scale: 1.1,
+                  transition: { duration: 0.3 }
+                }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   if (certificate.certificate !== "") {
                     window.open(certificate.certificate);
                   }
                 }}
-                className="certificate-item"
               >
-                <div className='flex flex-col text-center w-[120px] h-[150px] lg:w-[140px] lg:h-[170px] gap-4 cursor-pointer transition'>
+                <div className='certificate-item'>
                   <img src={certificate.img} alt={certificate.title} />
-                  <p className="text-sm">{certificate.title}</p>
+                  <p className="certificate-title">{certificate.title}</p>
                 </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
-export default Achievements;
+export default AchievementsCertificates;

@@ -29,7 +29,7 @@ const itemVariants = {
 const Links = () => {
   const location = useLocation();
   const items = ["World", "Portfolio", "Contact"];
-  const subItems = ['About', 'Skills', "Certificates", 'Projects', 'Contact'];
+  const subItems = ['About', 'Skills', "Residity", "Achievements", 'Projects', 'Contact'];
 
   return (
     <motion.div className="links" variants={variants}>
