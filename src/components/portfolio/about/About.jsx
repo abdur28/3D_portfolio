@@ -1,44 +1,88 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import "./about.scss";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
-const variants = {
-  initial: {
-    x: -500,
-    y: 100,
+const titleVariant = {
+  hidden: {
     opacity: 0,
+    y: -30
   },
-  animate: {
-    x: 0,
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
+      duration: 0.7,
+      ease: [0.6, 0.05, 0.01, 0.9],
+    }
+  }
+};
+
+const paragraphVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20
   },
+  visible: index => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      delay: 0.2 * (index + 1),
+      ease: "easeOut"
+    }
+  })
 };
 
 const About = () => {
   const ref = useRef();
+  const controls = useAnimation();
+  
+  // Use once: true to ensure animations only play once
+  const isInView = useInView(ref, { 
+    margin: "-100px", 
+    once: true,
+    amount: 0.3
+  });
 
-  const isInView = useInView(ref, { margin: "-100px" });
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+  const paragraphs = [
+    "At the intersection of robotics and software development, I've built a unique career that bridges virtual and physical worlds. As a Mechatronics engineer and software developer, I create systems where code transforms into real-world motion and intelligence. This fusion of disciplines allows me to approach problems with a rare perspective—seeing both the code that drives systems and the mechanical realities they must navigate.",
+    
+    "My journey began with a fascination for how things work, which evolved into building robots while simultaneously mastering the full software stack—from crafting immersive 3D experiences with Three.js to architecting complex backends with Node.js and Flask. This dual expertise became particularly valuable when founding Residity, where my mechanical understanding of physical spaces informed how we digitally represent properties and automate real estate processes.",
+    
+    "Beyond technical skills, I thrive on the creative challenge of transforming abstract problems into elegant solutions. Whether designing APIs that handle millions of requests, optimizing databases for lightning-fast property searches, or programming robotic systems that interact with their environment, I apply the same methodical approach: understand the core challenge, design an adaptable architecture, and implement with precision and foresight. This blend of creativity, technical depth, and cross-disciplinary knowledge enables me to build solutions others might not envision."
+  ];
 
   return (
     <motion.div
       className="services"
-      variants={variants}
-      initial="initial"
-      // animate="animate"
-      // whileInView="animate"
       ref={ref}
-      animate={"animate"}
+      initial="hidden"
+      animate={controls}
     >
       <div>
         <div className="text-container">
-          <h1 className="">About Me.</h1>
-          <p>Experienced software developer based in Moscow, Russia, proficient in JavaScript, Python, C++, and PHP, with expertise in frameworks like React, Node.js, Flask, and Three.js. Alongside my proficiency in software development, I am also a Mechatronics engineer and Robotics student, blending theoretical knowledge with practical application in the field. With a proven track record of delivering efficient and scalable solutions, I excel in addressing real-world challenges head-on.</p>
-          <p>I have extensive experience in developing web applications, APIs, databases and interactive experiences using a combination of these technologies. From frontend development with React to backend solutions with Node.js and Flask, I am adept at crafting robust and dynamic software solutions that meet and exceed your expectations. My ability to analyze complex problems and architect elegant solutions makes me a valuable asset in any development team.</p>
+          <motion.h1 
+            variants={titleVariant}
+            className=""
+          >
+            About Me.
+          </motion.h1>
+          
+          {paragraphs.map((paragraph, index) => (
+            <motion.p
+              key={index}
+              custom={index}
+              variants={paragraphVariants}
+            >
+              {paragraph}
+            </motion.p>
+          ))}
         </div>
       </div>
     </motion.div>

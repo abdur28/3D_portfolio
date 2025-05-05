@@ -72,7 +72,7 @@ const Hero = () => {
             Software Engineer
           </motion.h1>
           <motion.h3 variants={textVariants} className="subtitle">
-            Full Stack Developer | Founder of Residity | Robotics Engineer
+            Full Stack Developer | Founder of Residity | Mechatronics Engineer
           </motion.h3>
           <motion.img
             variants={textVariants}
@@ -88,7 +88,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Developer Entrepreneur Leader
+        Developer Engineer Entrepreneur
       </motion.div>
       <div className="imageContainer">
         <Canvas
