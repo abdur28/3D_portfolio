@@ -37,6 +37,10 @@
     gap: 0px;
     padding: 7vw;
 
+    @include mobile {
+      padding: 0;
+    }
+
     .wrapper {
       // max-width: 1366px;
       height: 100%;
@@ -57,7 +61,7 @@
         top: 0;
         flex-direction: column;
         gap: 10vw;
-        padding-top: 200px;
+        padding-top: 150px;
       }
 
 
