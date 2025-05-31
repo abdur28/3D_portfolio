@@ -19,7 +19,14 @@ const Portfolio = () => {
       <section id="about">
         <Parallax type="Who I am" />
       </section>
-      <section>
+      <section 
+      style={{
+        height: "100%",
+        width: "100%",
+        paddingTop: "50px",
+        paddingBottom: "50px",
+      }}
+      >
         <About />
       </section>
       <section id="skills">
@@ -38,8 +45,8 @@ const Portfolio = () => {
         background: "linear-gradient(180deg, #111132, #0c0c1d)",
         height: "100%",
         width: "100%",
-        scrollSnapAlign: "center",
         overflow: "hidden",
+        paddingTop: "50px",
       }}
       >
         <ResidityShowcase />
@@ -53,15 +60,15 @@ const Portfolio = () => {
         background: "linear-gradient(180deg, #111132, #0c0c1d)",
         height: "100%",
         width: "100%",
-        scrollSnapAlign: "center",
         overflow: "hidden",
+        paddingTop: "50px",
       }}>
         <Achievements />
       </section>
       <section id="projects">
         <Parallax type="What I do" />
       </section>
-      <Projects />
+       <Projects />
       <section id="contact">
         <Contact />
       </section>
