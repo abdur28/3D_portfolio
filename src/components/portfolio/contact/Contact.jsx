@@ -96,7 +96,7 @@ const Contact = () => {
             <span>abdurrahmanidris28@gmail.com</span>
           </motion.div>
           <motion.div className="item" variants={variants}>
-            <h2>Phone:</h2>
+            <h2>Phone (Russia):</h2>
             <span>+7 (901) 427-39-68</span>
           </motion.div>
           <motion.div className="item pt-10 " variants={variants}>

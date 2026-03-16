@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-300 text-center">
-          © 2025 Abdurrahman Idris. All rights reserved.
+          © 2026 Abdurrahman Idris. All rights reserved.
         </p>
       </div>
     </footer>

@@ -74,7 +74,7 @@ const ResidityShowcase = () => {
   const achievements = [
     "Grew user base to 1k+ users within first month",
     "Reduced property listing time by 40% through optimized workflows",
-    "Featured in [relevant tech or real estate publications]",
+    "Launched on both Google Play and Apple App Store",
     "Secured partnerships with some major real estate agencies"
   ];
 
@@ -102,19 +102,19 @@ const ResidityShowcase = () => {
 
           <div className="stats-container">
             <div className="stat">
-              <span className="stat-number">10K+</span>
+              <span className="stat-number">1K+</span>
               <span className="stat-label">Users</span>
             </div>
             <div className="stat">
-              <span className="stat-number">5K+</span>
+              <span className="stat-number">1K+</span>
               <span className="stat-label">Properties</span>
             </div>
             <div className="stat">
-              <span className="stat-number">200+</span>
+              <span className="stat-number">100+</span>
               <span className="stat-label">Agents</span>
             </div>
             <div className="stat">
-              <span className="stat-number">50+</span>
+              <span className="stat-number">20+</span>
               <span className="stat-label">Agencies</span>
             </div>
           </div>
@@ -195,7 +195,7 @@ const ResidityShowcase = () => {
                 />
               </a>
               
-              <a href="https://apps.apple.com/app/residity/id123456789" target="_blank" rel="noopener noreferrer" className="download-button">
+              <a href="https://apps.apple.com/us/app/residity/id6751098670" target="_blank" rel="noopener noreferrer" className="download-button">
                 <img 
                   src="/apple-download.png" 
                   alt="Download on App Store" 
