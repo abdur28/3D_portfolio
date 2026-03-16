@@ -55,7 +55,7 @@ const About = () => {
     
     "My journey began with a fascination for how things work, which evolved into building robots while simultaneously mastering the full software stack—from crafting immersive 3D experiences with Three.js to architecting complex backends with Node.js, React, React Native, and Flask. This dual expertise became particularly valuable when founding Residity, where my mechanical understanding of physical spaces informed how we digitally represent properties and automate real estate processes.",
     
-    "Beyond technical skills, I thrive on the creative challenge of transforming abstract problems into elegant solutions. Whether designing APIs that handle millions of requests, optimizing databases for lightning-fast property searches, or programming robotic systems that interact with their environment, I apply the same methodical approach: understand the core challenge, design an adaptable architecture, and implement with precision and foresight. This blend of creativity, technical depth, and cross-disciplinary knowledge enables me to build solutions others might not envision."
+    "Beyond technical skills, I thrive on the creative challenge of transforming abstract problems into elegant solutions. Whether designing scalable APIs, optimizing databases for fast property searches, or programming robotic systems that interact with their environment, I apply the same methodical approach: understand the core challenge, design an adaptable architecture, and implement with precision and foresight. This blend of creativity, technical depth, and cross-disciplinary knowledge enables me to build solutions others might not envision."
   ];
 
   return (

@@ -23,18 +23,18 @@ const items = [
   },
   {
     id: 1,
-    title: "E-commerce Web App",
+    title: "StyleSavant",
     img: `${stylesavant}`,
     link: 'https://stylesavant.netlify.app/',
-    desc: "A complete e-commerce business management platform that offers a range of features with easy authentication and secure online payment. It allows users to create their own account and purchase various products. It also includes a custom admin route for the business owner to manage and update their products and orders. ",
+    desc: "Full-stack e-commerce platform with Clerk authentication, Paystack payment processing, and a custom admin dashboard for product and order management.",
     tags: [{name:'Node.JS', color:'green'}, {name:'React.JS', color:'sky-blue'}, {name:'Next.JS', color:'black'}, {name:'MongoDB', color:'light-green'}, {name:'TailwindCSS', color:'light-blue'}, {name:'Clerk', color:'blue'}, {name:'PayStack', color:'light-blue'}]
   },
   {
     id: 2,
-    title: "Photography Website",
+    title: "JJ Photography",
     img: `${jjphoto}`,
     link: 'https://jerryjphotography.com/',
-    desc: "A photography portfolio website that showcases the artist's work, providing a visually stunning platform to exhibit their photography skills and creative vision. Visitors can browse through various galleries and contact the photographer for inquiries or bookings. It also includes an admin route for the photographer to manage and update their portfolio content.",
+    desc: "Photography portfolio with AWS-hosted image galleries, Redis-cached content delivery, and an admin CMS for the photographer to manage portfolios and booking inquiries.",
     tags: [{name:'Node.JS', color:'green'},{name:'Next.JS', color:'black'}, {name:'AWS', color:'orange'}, {name:'MongoDB', color:'light-green'}, {name:'Redis', color:'red'}, {name:'TailwindCSS', color:'light-blue'}]
   },
   {
@@ -47,36 +47,36 @@ const items = [
   },
   {
     id: 4,
-    title: "Travel Website",
+    title: "Tourly",
     img: `${tourly}`,
     link: 'https://abdur28.github.io/tourly/',
     tags: [{name:'Node.JS', color:'green'}, {name:'AWS', color:'orange'}, {name:'MongoDB', color:'light-green'},{name:'Redis', color:'red'},{name:'Next.JS', color:'black'}, {name:'TailwindCSS', color:'light-blue'}],
-    desc: "A beautiful, fully responsive travel website that showcases various wonderful locations, allows users to register, book and pay for tour guides"
+    desc: "Travel booking platform where users can browse destinations, register accounts, and book and pay for tour guides."
   },
   {
     id: 5,
-    title: "Newsletter",
+    title: "Dollar-to-RUB Tracker",
     img: `${dollar}`,
     link: 'https://dollar-to-rub.cyclic.app/',
     tags: [{name:'Node.JS', color:'green'}, {name:'Python', color:'light-blue'}, {name:'MongoDB', color:'light-green'}],
-    desc: "A web application that sends daily currency rate exchange to registered users. Users receive timely updates on currency fluctuations via email or notifications."
+    desc: "Automated currency exchange tracker that scrapes live USD/RUB rates and emails daily updates to registered subscribers."
   },
   {
     id: 6,
-    title: "Saas Landing Page",
+    title: "Space — SaaS Landing Page",
     img: `${space}`,
     link: 'https://abdur28.github.io/space-website/',
     git: 'https://github.com/abdur28/space-website',
     tags: [{name:'Node.JS', color:'green'}, {name:'Next.JS', color:'black'}, {name:'MongoDB', color:'light-green'}, {name:'TailwindCSS', color:'light-blue'}],
-    desc: "A simple fully responsive example website with a creative design"
+    desc: "Fully responsive SaaS landing page with modern design, smooth animations, and mobile-first layout."
   },
   {
     id: 7,
-    title: "Games",
+    title: "Spaceship Wars",
     img: `${game}`,
     git: 'https://github.com/abdur28/spaceship-wars-game',
     tags: [{name:'Python', color:'light-blue'}, {name:'Pygame', color:'yellow'}],
-    desc: "A gaming platform that provides a diverse selection of games for players of all ages and interests. It offers a seamless gaming experience with features such as multiplayer options and leaderboards.",
+    desc: "2D space combat game built with Pygame featuring real-time ship controls, enemy AI, and a scoring system.",
   },
 ];
 
